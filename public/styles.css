@@ -1,0 +1,55 @@
+body {
+  background: #ffffea;
+}
+
+
+.interactArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%; 
+  max-width: 600px; 
+  min-width: 300px; 
+}
+
+#outputBox {
+  background-color: antiquewhite;
+  margin-bottom: 30px; 
+  width: 100%;
+  padding: 15px;
+  height: 300px;
+  border-radius: 8px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  text-align: left;
+  scroll-behavior: smooth;
+}
+
+.input-container {
+  display: flex;
+  width: 100%; 
+}
+
+#inputBox {
+  background-color: aliceblue;
+  flex: 1; 
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+#sendButton {
+  background-color: lightcoral;
+  color: white;
+  border: none;
+  padding: 15px 20px; 
+  border-radius: 8px;
+  margin-left: 10px; 
+  cursor: pointer;
+  min-width: 80px; 
+}
