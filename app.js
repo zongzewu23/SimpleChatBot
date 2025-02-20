@@ -27,21 +27,21 @@ const chatSession = model.startChat({
 
 app.post('/chat', async (req, res) => {
   try {
-    const {prompt} = req.body;
+    const { prompt } = req.body;
     if (!prompt) {
-      return res.status(400).json({error:"Prompt is missing"});
+      return res.status(400).json({ error: "Prompt is missing" });
     }
 
     const result = await chatSession.sendMessage(prompt);
     const textResponse = result.response.text();
 
-    res.json({    
+    res.json({
       response: textResponse,
       model: modelName
     });
   } catch (error) {
     console.error("Error calling Gemini API", error);
-    res.status(500).json({error:"Failed to fetch response"});
+    res.status(500).json({ error: "Failed to fetch response" });
   }
 });
 
